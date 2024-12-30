@@ -26,7 +26,54 @@
             color: var(--text-color);
             background-color: var(--background-color);
         }
+        /* Increase font size for all sections: About Me, Education, Skills, Achievements */
 
+/* For the 'About Me' section */
+#about {
+    font-size: 19.5px; /* Increase the font size */
+    line-height: 1.6; /* Adjust line height for better spacing */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* For the 'Education' section */
+#education {
+    font-size: 19px; /* Increase the font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* For the 'Skills' section */
+#skills {
+    font-size: 20px; /* Increase the font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* For the 'Achievements' section */
+#achievements {
+    font-size: 19.5px; /* Increase the font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* For the 'projects' section */
+#projects {
+    font-size: 20px; /* Increase the font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* If you want to increase size for headings (like h2, h3) inside these sections */
+#about h2, #education h2, #skills h2, #achievements h2 ,#projects h2, #contact h2 {
+    font-size: 35px; /* Increase heading size */
+    
+}
+
+
+/* For the 'About Me' section */
+#about {
+    text-align: center; /* Center-align the text */
+
+   
+}
         .container {
             width: 90%;
             max-width: 1200px;
@@ -42,6 +89,13 @@
             z-index: 1000;
             backdrop-filter: blur(5px);
         }
+        header {
+          background-color: #212121; /* Dark charcoal or black */
+        color: #ffffff; /* White text to ensure good readability */
+        padding: 20px 30px;
+        border-bottom: 2px solid #037d88; /* Matching border to reinforce the accent color */
+        }
+
 
         nav {
             display: flex;
@@ -95,6 +149,18 @@
             margin-bottom: 2rem;
             text-align: center;
         }
+
+        /* Adjust the size of the heading or paragraph */
+        #engineering-text {
+            font-size: 25px; /* Increase the font size as needed */
+            
+        }
+        /* Adjust the size of the heading or h1 */
+        #hello {
+            font-size: 65px; /* Increase the font size as needed */
+            
+        }
+
 
         .hero-content span {
             color: var(--accent-color);
@@ -215,7 +281,7 @@
         footer {
             background-color: var(--section-bg-color);
             text-align: center;
-            padding: 2rem 0;
+            padding: 4rem 0;
             margin-top: 2rem;
         }
 
@@ -260,24 +326,60 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;  /* Add some padding for spacing inside the footer */
         }
         .footer-name {
             text-align: left;
+            font-size: 1.3rem;  /* Increase the size of the name and student info */
+            line-height: 1.8;
         }
+
         .footer-contacts {
             text-align: right;
         }
         .footer-contacts a {
+
+            font-size: 1.4rem;  /* Increase the size of the contact links */
             color: var(--text-color);
-            margin-left: 1rem;
+            margin-left: 1.5rem;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .footer-contacts a:hover {
             color: var(--accent-color);
         }
+        .footer-copyright {
+            font-size: 1rem; /* Slightly smaller font for the copyright text */
+            color: var(--text-color); /* Use the same text color as the footer */
+            margin-top: 1rem; /* Add some space between this and the footer content */
+            text-align: center; /* Center align the copyright text */
+            position: relative; /* Position relative for the ::before pseudo-element */
+            margin-top: 40px;  /* Adjust the value to your preference */
+        }
+
+
+        .menu-toggle {
+                display: none;
+                background: none;
+                border: none;
+                color: var(--text-color);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
 
         @media (max-width: 768px) {
+    #about, #education, #skills, #achievements,#projects {
+        font-size: 16px; /* Smaller size for mobile */
+    }
+
+    #about h2, #education h2, #skills h2, #achievements h2,#projects h2 {
+        font-size: 32px; /* Adjust heading size on mobile */
+    }
+    #hello {
+        font-size: 45px; /* Adjust heading size on mobile */
+    }
+
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -296,16 +398,9 @@
             .nav-links li {
                 margin: 0.5rem 0;
             }
-
             .menu-toggle {
-                display: block;
-                background: none;
-                border: none;
-                color: var(--text-color);
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-
+        display: block;
+                }
             h1 {
                 font-size: 2rem;
             }
@@ -313,7 +408,35 @@
             h2 {
                 font-size: 1.8rem;
             }
-        }
+        
+    footer {
+        padding: 3rem 0;  /* Reduce padding for smaller screens */
+    }
+
+    .footer-name p {
+        font-size: 1.2rem;  /* Slightly smaller text on mobile */
+    }
+
+    .footer-contacts a {
+        font-size: 1.1rem;  /* Slightly smaller links on mobile */
+        margin-left: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;  /* Stack footer content vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer-name, .footer-contacts {
+        text-align: center;  /* Center align both sections on mobile */
+    }
+     /* Footer Copyright for Mobile */
+     .footer-copyright {
+        font-size: 1rem; /* Slightly smaller font for mobile */
+        margin-top: 1rem;
+        padding: 1rem 0; /* Add padding around copyright text */
+    }
+}      
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -329,13 +452,14 @@
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="menu-toggle">☰</button>
         </nav>
     </header>
 
     <section id="hero">
         <div class="container hero-content">
-            <h1>Hi, I'm <span>Ritu Kumari</span></h1>
-            <p>Engineering Student & Aspiring Innovator</p>
+            <h1 id="hello">Hi, I'm <span>Ritu Kumari</span></h1>
+            <p id = "engineering-text">Engineering Student & Aspiring Innovator</p>
             <div class="hero-icons">
                 <a href="https://linkedin.com/in/ritukumaribe" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/RitukumariBE" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -347,7 +471,7 @@
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>&nbsp I am a first-year engineering student passionate about technology and innovation.&nbsp Although I'm just beginning my journey, I'm excited to learn and grow in the &nbsp field of engineering. &nbsp My goal is to contribute to cutting-edge projects that make a positive impact on society.</p>
+            <p> I am a first-year engineering student passionate about technology and innovation. Although I'm just beginning my journey, I'm excited to learn and grow in the field of engineering. My goal is to contribute to cutting-edge projects that make a positive impact on society.</p>
         </section>
             <section id="education">
                 <h2>Education</h2>
@@ -417,8 +541,8 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-name">
-                <p>Ritu Kumari</p>
-                <p>(Student)</p>
+                <h3>Ritu Kumari</h3>
+                <p>Aspiring Engineer</p>
             </div>
             <div class="footer-contacts">
                 <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
@@ -426,6 +550,9 @@
                 <a href="https://linkedin.com/in/ritukumaribe" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/RitukumariBE" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2024 Ritu Kumari . All rights reserved</p>
         </div>
     </footer>
 
